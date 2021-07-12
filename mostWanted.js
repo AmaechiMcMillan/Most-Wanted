@@ -18,10 +18,41 @@ function app(people){
 	mainMenu(searchResults, people);
 }
 
+function mainMenu(person, people){
+  
+  
+	if(!person){
+	  alert("Could not find that individual.");
+	  return app(people); // restart
+	}
+  
+	let displayOption = prompt("Found " + person.firstName + " " + person.lastName + " . Do you want to know their 'info', 'family', or 'descendants'? Type the option you want or 'restart' or 'quit'");
+  
+	switch(displayOption){
+	  case "info":
+	  // TODO: get person's info
+	  break;
+	  case "family":
+	  // TODO: get person's family
+	  break;
+	  case "descendants":
+	  // TODO: get person's descendants
+	  break;
+	  case "restart":
+	  app(people); // restart
+	  break;
+	  case "quit":
+	  return; // stop execution
+	  default:
+	  return mainMenu(person, people); // ask again
+	}
+  }
+
+
 //allow user to search for multiple traits like gender, height, weight, eye color and occupation
 function searchByName(people){
-	let firstName = prompt("What is the person's first name?", autoValid).toLowerCase();
-	let lastName = prompt("What is the person's last name?", autoValid).toLowerCase();
+	let firstName = prompt("What is the person's first name?").toLowerCase();
+	let lastName = prompt("What is the person's last name?").toLowerCase();
 	
 	// add .toLowerCase()
 	let foundPerson = people.filter(function(potentialMatch){
