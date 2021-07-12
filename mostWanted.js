@@ -63,7 +63,7 @@ function searchByHairColor(people){
 		return false;
 	  }
 	})
-	return foundHairColor;
+	return foundPerson;
   }
 
   function searchByWeight(people){
@@ -77,7 +77,7 @@ function searchByHairColor(people){
 		return false;
 	  }
 	})
-	return foundEyeColor;
+	return foundPerson;
   }
 
   function searchByHeight(people){
@@ -91,7 +91,7 @@ function searchByHairColor(people){
 		return false;
 	  }
 	})
-	return foundHairColor;
+	return foundPerson;
   }
 
 
