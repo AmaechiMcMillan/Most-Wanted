@@ -38,7 +38,7 @@ function searchByName(people){
 
 
 function searchByEyeColor(){
-	let eyeColor = promptFor("What is the person's eye color?", autoValid);
+	let eyeColor = promptFor("What is the person's eye color?");
   
 	let foundPerson = people.filter(function(potentialMatch){
 	  if(potentialMatch.eyeColor === eyeColor){
@@ -53,7 +53,7 @@ function searchByEyeColor(){
 }
 
 function searchByHairColor(people){
-	let hairColor = promptFor("What is the person's hair color?", autoValid);
+	let hairColor = promptFor("What is the person's hair color?");
   
 	let foundPerson = people.filter(function(potentialMatch){
 	  if(potentialMatch.hairColor === hairColor){
@@ -67,7 +67,7 @@ function searchByHairColor(people){
   }
 
   function searchByWeight(people){
-	let weight = promptFor("What is the person's weight?", autoValid);
+	let weight = promptFor("What is the person's weight?");
   
 	let foundEyeColor = people.filter(function(potentialMatch){
 	  if(potentialMatch.weight === weight){
@@ -81,7 +81,7 @@ function searchByHairColor(people){
   }
 
   function searchByHeight(people){
-	let height = promptFor("What is the person's height?", autoValid);
+	let height = promptFor("What is the person's height?");
   
 	let foundPerson = people.filter(function(potentialMatch){
 	  if(potentialMatch.height === height){
@@ -95,7 +95,7 @@ function searchByHairColor(people){
   }
 
   function searchByGender(people){
-	let personsGender = promptFor("What is the person's gender?", autoValid);
+	let personsGender = promptFor("What is the person's gender?");
   
 	let foundPerson = people.filter(function(potentialMatch){
 	  if(potentialMatch.male === male && potentialMatch.female === female){
