@@ -21,7 +21,7 @@ function app(people){
 //allow user to search for multiple traits like gender, height, weight, eye color and occupation
 function searchByName(people){
 	let firstName = promptFor("What is the person's first name?", autoValid).toLowerCase();
-	let lastName = promptFor("What is the person's last name?", autoValid);
+	let lastName = promptFor("What is the person's last name?", autoValid).toLowerCase();
 	
 	// add .toLowerCase()
 	let foundPerson = people.filter(function(potentialMatch){
