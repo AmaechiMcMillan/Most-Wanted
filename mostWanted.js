@@ -70,7 +70,7 @@ function searchByHairColor(people){
 	let weight = promptFor("What is the person's weight?", autoValid);
   
 	let foundEyeColor = people.filter(function(potentialMatch){
-	  if(potentialMatch.eyeColor === eyeColor){
+	  if(potentialMatch.weight === weight){
 		return true;
 	  }
 	  else{
@@ -84,7 +84,7 @@ function searchByHairColor(people){
 	let height = promptFor("What is the person's height?", autoValid);
   
 	let foundPerson = people.filter(function(potentialMatch){
-	  if(potentialMatch.hairColor === hairColor){
+	  if(potentialMatch.height === height){
 		return true;
 	  }
 	  else{
