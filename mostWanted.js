@@ -65,6 +65,34 @@ function searchByHairColor(people){
 	return foundHairColor;
   }
 
+  function searchByWeight(people){
+	let weight = promptFor("What is the person's weight?", autoValid);
+  
+	let foundEyeColor = people.filter(function(potentialMatch){
+	  if(potentialMatch.eyeColor === eyeColor){
+		return true;
+	  }
+	  else{
+		return false;
+	  }
+	})
+	return foundEyeColor;
+  }
+
+  function searchByHeight(people){
+	let height = promptFor("What is the person's height?", autoValid);
+  
+	let foundPerson = people.filter(function(potentialMatch){
+	  if(potentialMatch.hairColor === hairColor){
+		return true;
+	  }
+	  else{
+		return false;
+	  }
+	})
+	return foundHairColor;
+  }
+
 
 function yesNo(input){
   if(input.toLowerCase() == "yes" || input.toLowerCase() == "no"){
