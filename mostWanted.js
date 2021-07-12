@@ -51,6 +51,21 @@ function searchByEyeColor(){
 	return foundPerson;
 }
 
+function searchByHairColor(people){
+	let hairColor = promptFor("What is the person's hair color?", autoValid);
+  
+	let foundPerson = people.filter(function(potentialMatch){
+	  if(potentialMatch.hairColor === hairColor){
+		return true;
+	  }
+	  else{
+		return false;
+	  }
+	})
+	return foundHairColor;
+  }
+
+
 function yesNo(input){
   if(input.toLowerCase() == "yes" || input.toLowerCase() == "no"){
     return true;
