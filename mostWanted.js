@@ -94,6 +94,20 @@ function searchByHairColor(people){
 	return foundPerson;
   }
 
+  function searchByGender(people){
+	let personsGender = promptFor("What is the person's gender?", autoValid);
+  
+	let foundPerson = people.filter(function(potentialMatch){
+	  if(potentialMatch.male === male && potentialMatch.female === female){
+		return true;
+	  }
+	  else{
+		return false;
+	  }
+	})
+	return foundPerson;
+  }
+
 
 function yesNo(input){
   if(input.toLowerCase() == "yes" || input.toLowerCase() == "no"){
