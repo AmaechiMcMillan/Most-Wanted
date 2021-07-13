@@ -1,6 +1,5 @@
 "use strict"
 
-//allow user to search based on a single criteria, male or female
 function app(people){
 	let searchType = prompt("Do you know the name of the person you are looking for? Enter 'yes' or 'no'").toLowerCase();
 	let searchResults;
@@ -30,29 +29,24 @@ function mainMenu(person, people){
 
   switch(displayOption){
 	case "info":
-	// TODO: get person's info
 	break;
 	case "family":
-	// TODO: get person's family
 	break;
 	case "descendants":
-	// TODO: get person's descendants
 	break;
 	case "restart":
-	app(people); // restart
+	app(people); 
 	break;
 	case "quit":
-	return; // stop execution
+	return; 
 	default:
-	return mainMenu(person, people); // ask again
+	return mainMenu(person, people); 
   }
 
-//allow user to search for multiple traits like gender, height, weight, eye color and occupation
 function searchByName(people){
 	let firstName = prompt("What is the person's first name?").toLowerCase();
 	let lastName = prompt("What is the person's last name?").toLowerCase();
 	
-	// add .toLowerCase()
 	let foundPerson = people.filter(function(potentialMatch){
 	  if(potentialMatch.firstName === firstName && potentialMatch.lastName === lastName){
 		return true;
@@ -61,7 +55,6 @@ function searchByName(people){
 		return false;
 	  }
 	})
-	// TODO: find the person single person object using the name they entered.
 	return foundPerson;
   }
 
@@ -77,7 +70,6 @@ function searchByEyeColor(){
 		return false;
 	  }
 	})
-	// TODO: find the person single person object using the name they entered.
 	return foundPerson;
 }
 
@@ -137,19 +129,23 @@ function searchByHairColor(people){
 	return foundPerson;
   }
 
-
-
-
-function yesNo(input){
-  if(input.toLowerCase() == "yes" || input.toLowerCase() == "no"){
-    return true;
+  function promptFor(question, valid){
+	let response;
+	let isValid;
+	do{
+	  response = prompt(question).trim();
+	  isValid = valid(response);
+	} while(response !== ""  ||  isValid === false)
+	return response
   }
-  else{
-    return false;
+  
+  function yesNo(input){
+	if(input.toLowerCase() == "yes" || input.toLowerCase() == "no"){
+	  return true;
+	}
+	else{
+	  return false;
+	}
   }
-}
+  
 
-
-function autoValid(input){
-	return true; // default validation only
-  }
