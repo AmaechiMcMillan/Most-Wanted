@@ -1,5 +1,5 @@
 "use strict"
-
+// written by Steve Clark
 
 function app(people){
   let searchType = promptFor("Do you know the name of the person you are looking for? Enter 'yes' or 'no'", yesNo).toLowerCase();
