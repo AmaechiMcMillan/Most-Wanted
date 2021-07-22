@@ -150,7 +150,7 @@ function searchByName(people){
 
  let lastName = promptFor("What is the person's last name?", chars);
 
- let foundPerson = people.filter(function(person); 
+ let foundPerson = people.filter(function(person){
 
    if(person.firstName === firstName && person.lastName === lastName){
      return true;
@@ -159,7 +159,8 @@ function searchByName(people){
      return false;
    }
  }
-  return foundPerson;
+  return foundPerson
+}
 
 function displayPeople(people){
  alert(people.map(function(person){
