@@ -20,7 +20,7 @@ function app(people){
 
 function mainMenu(searchResults, people)
   
- let foundPerson = searchResults
+ let foundPerson = searchResults;
 
  if(!people){
    alert("Could not find that individual.");
