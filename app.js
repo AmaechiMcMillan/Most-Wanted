@@ -152,15 +152,15 @@ function searchByName(people){
 
  let foundPerson = people.filter(function(person){
 
-   if(person.firstName === firstName && person.lastName === lastName){
+   while(person.firstName === firstName && person.lastName === lastName){;
      return true;
    }
-   else{
-     return false;
+   if(person.firstName !== firstName && person.lastName !== lastName){
+    return false;
    }
+    else
+    return foundPerson;
  }
-  return foundPerson
-}
 
 function displayPeople(people){
  alert(people.map(function(person){
